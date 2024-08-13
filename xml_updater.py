@@ -59,13 +59,17 @@ def update_plugin_xml(method_name, plugin_xml_path):
         print(f"{Fore.YELLOW}Method already exists: {method_name}")
 
 def scan_log_file(log_file_path, plugin_xml_path):
+    processed_methods = set()
     print(f"{Fore.CYAN}Scanning the log file: {log_file_path}")
     with open(log_file_path, 'r') as log_file:
         for line in log_file:
             method_name = extract_method_name(line)
             if method_name:
-                update_plugin_xml(method_name, plugin_xml_path)
+                if method_name not in processed_methods:
+                    update_plugin_xml(method_name, plugin_xml_path)
+                    processed_methods.add(method_name)
     print(f"{Fore.CYAN}Finished scanning the log file.")
+    return processed_methods
 
 def extract_method_name(line):
     log_entry_pattern = re.compile(
