@@ -13,14 +13,12 @@ This project is a Python-based tool for monitoring a specified log file to detec
 ## Installation
 
 1. **Clone the repository**:
-
    ```
-   git clone https://github.com/fm1randa/jira-10-auto-velocity-allowlist.git
+   git clone https://github.com/yourusername/jira-10-auto-velocity-allowlist.git
    cd jira-10-auto-velocity-allowlist
    ```
 
 2. **Create and activate a virtual environment (optional but recommended)**:
-
    ```
    python3 -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
@@ -34,21 +32,17 @@ This project is a Python-based tool for monitoring a specified log file to detec
 ## Usage
 
 1. **Run the application**:
-
    ```
    python main.py
    ```
 
 2. **Select the Log File**:
-
    - Click the "Browse..." button next to "Log File" and choose the `atlassian-jira.log` file you want to monitor.
 
 3. **Select the Plugin XML File**:
-
    - Click the "Browse..." button next to "Plugin XML File" and choose the `atlassian-plugin.xml` file that will be updated.
 
 4. **Start Watching**:
-
    - Click the "Start Watching" button to begin monitoring the log file. The button will toggle to "Stop Watching" when the process starts.
 
 5. **Stop Watching**:
@@ -62,6 +56,11 @@ The terminal provides real-time feedback while the tool is running:
 - **Green Messages**: Successful operations (e.g., new methods inserted into the XML file).
 - **Yellow Messages**: Warnings (e.g., a method that already exists in the XML file).
 - **Red Messages**: Errors (e.g., unable to locate the velocity-allowlist section in the XML file).
+
+## Screenshot
+
+![image](https://github.com/user-attachments/assets/3bc3f358-05ef-43ab-a475-5581e239f6ff)
+
 
 ## File Structure
 
