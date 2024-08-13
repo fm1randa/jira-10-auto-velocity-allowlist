@@ -15,7 +15,7 @@ This project is a Python-based tool for monitoring a specified log file to detec
 1. **Clone the repository**:
 
    ```
-   git clone https://github.com/yourusername/jira-10-auto-velocity-allowlist.git
+   git clone https://github.com/fm1randa/jira-10-auto-velocity-allowlist.git
    cd jira-10-auto-velocity-allowlist
    ```
 
